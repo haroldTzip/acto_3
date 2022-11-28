@@ -1,0 +1,94 @@
+[{
+    "id": "asuri",
+    "super_brawll": "Asuri",    
+    "weapon_1" : "Cuchillas",
+    "weapon_2" : "Espada",
+    "price" : 500000
+     
+    
+},
+{
+    "id": "bodvar",
+    "super_brawll": "Bodvar",    
+    "weapon_1" : "Martillo",
+    "weapon_2" : "Espada",
+    "price" : 300000
+     
+    
+    
+},
+{
+    "id": "ember",
+    "super_brawll": "Ember",
+    "weapon_2" : "Arco",
+    "weapon_1" : "Cuchillas",
+    "price" : 100000
+     
+
+    
+},
+{
+    "id": "kor",
+    "super_brawll": "Kor",
+    "weapon_2" : "Guanteletes",
+    "weapon_1" : "Martillo",
+    "price" : 800000
+     
+    
+},
+{
+    "id": "lucien",
+    "super_brawll": "Lucien",
+    "weapon_1" : "Cuchillas",
+    "weapon_2" : "Pistolas",
+    "price" : 400000
+     
+        
+    
+},
+{
+    "id": "mirage",
+    "super_brawll": "Mirage",
+    "weapon_1" : "Guadaña",
+    "weapon_2" : "Lanza",
+    "price" : 900000
+     
+        
+    
+},
+{
+    "id": "orion",
+    "super_brawll": "Orion",
+    "weapon_1" : "Lanza_cohete",
+    "weapon_2" : "Lanza",
+    "price" : 700000
+     
+
+    
+},
+{
+    "id": "sentinel",
+    "super_brawll": "Sentinel",
+    "weapon_2" : "Cuchillas",
+    "weapon_1" : "Martillo",
+    "price" : 600000
+    
+    
+},
+{
+    "id": "val",
+    "super_brawll": "Val",
+    "weapon_2" : "Guanteletes",
+    "weapon_1" : "Espada",
+    "price" : 100000
+     
+    
+},
+{
+    "id": "teros",
+    "super_brawll": "Teros",
+    "weapon_2" : "Martillo",
+    "weapon_1" : "Hacha",
+    "price" : 200000
+}
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./partials/head', { title : 'brawllhalla' }) %>
+
+	<body>
+		<header>
+			<div class="container">
+				<h1><%= title %></h1>
+				<hr />
+				<nav>
+				<a href="#">Home</a>
+				<a href="#palabra">Nuestras Leyendas</a>
+				</nav>
+			</div>
+
+		</header>
+
+
+
+
+	<section id="hero">
+      <h1>Listo Para Jugar?</h1>
+      <button>VAMOS!</button>
+    </section>
+
+	<section id="palabra">
+      <h2>Conoce Nuestras Leyendas!</h2>
+	</section>
+
+	
+
+		<main>
+			<section class="cartas">
+				<% brawllsJSON.forEach(brawll => { %>
+
+				<div class="card1">
+          <img src="/assets/<%- brawll.id %>.jpg" alt="<%- brawll.super_brawll %> image" width= "250">
+       
+					<div class="card">
+            <h4><%= brawll.super_brawll %></h4>
+            <a href="brawll-detail/<%- brawll.id %>">Details</a>
+
+          </div>
+				</div>
+
+				<% }) %>
+			</section>
+
+		</main>
+
+
+
+
+		<footer>
+
+			<%- include('./partials/footer')  %> 
+		</footer>
+	</body>
+</html>
