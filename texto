@@ -1,0 +1,59 @@
+params. Esta propiedad contiene un objeto con las propiedades equivalentes a los parámetros nombrados en la ruta. Por ejemplo, si tenemos una ruta de la forma /user/:name entonces la propiedad name está disponible como req.params.name y allí podremos ver su valor.
+
+find: Busca una cadena de texto (texto_buscado) dentro de otra (dentro_del_texto) y devuelve el número de la posición inicial de texto_buscado, desde el primer carácter de dentro_del_texto.
+
+render: La función res. render() se usa para renderizar una vista y envía la string HTML renderizada al cliente.
+
+fs: Un sistema de archivos (FS) es un componente del sistema operativo que proporciona la organización de la creación, el almacenamiento y el acceso a conjuntos de datos con nombre archivos.
+
+path: Establece la ruta de acceso del comando en la variable de entorno PATH, especificando el conjunto de directorios utilizados para buscar archivos ejecutables (.exe). Si se usa sin parámetros, este comando muestra la ruta de acceso del comando actual.
+
+gitignore: gitignore , es un archivo de texto que le dice a Git qué archivos o carpetas ignorar en un proyecto.
+
+sequeñize:  simplifica el trabajo con bases de datos como PostgreSQL, MySQL y más. Es un popular proyecto open source que se caracteriza por: Manejar registros de bases de datos al representarlos como objetos.
+
+MySQL: permite almacenar y acceder a los datos a través de múltiples motores de almacenamiento, incluyendo InnoDB, CSV y NDB. MySQL también es capaz de replicar datos y particionar tablas para mejorar el rendimiento y la durabilidad.
+
+nodemon: nodemon es una utilidad de interfaz de línea de comandos (CLI) desarrollada por @rem que envuelve su aplicación Node, vigila el sistema de archivos y reinicia automáticamente el proceso.
+
+Multer es un "middleware" de node. js para el manejo de multipart/form-data , el cuál es usado sobre todo para la subida de archivos. Está escrito sobre busboy para maximizar su eficiencia.
+
+Sequelize-cli: es un ORM que permite a los usuarios llamar a funciones javascript para interactuar con SQL DB sin escribir consultas reales. Es bastante útil para acelerar el tiempo de desarrollo.
+
+
+
+module.exports = (sequelize, DataTypes) => {
+    const personajes = sequelize.define('Personajes', {
+        id: {
+            type : DataTypes.INTEGER,
+            primaryKey : true,
+            autoIncrement : true,
+            allowNull : false,
+            unique : true
+        },
+        price : {
+            allowNull : false,
+            type : float
+        },
+         weapon_1 : {
+            allowNull : false,
+            type : DataTypes.STRING(45)
+        },
+         weapon_2 : {
+            allowNull : false,
+            type : DataTypes.STRING(45)
+        }, {
+            tableName : 'acto_3',
+            timestamps : false,
+            underscored : true
+        
+
+    });
+
+    return personajes;
+}
+
+
+
+
+const db = require('../database/models')
