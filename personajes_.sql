@@ -24,11 +24,14 @@ DROP TABLE IF EXISTS `personajes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `personajes` (
   `idpersonajes` int NOT NULL AUTO_INCREMENT,
-  `price` float NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `imagen` varchar(200) NOT NULL,
+  `price` varchar(45) NOT NULL,
   `weapon_1` varchar(45) NOT NULL,
   `weapon_2` varchar(45) NOT NULL,
-  PRIMARY KEY (`idpersonajes`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`idpersonajes`),
+  UNIQUE KEY `idpersonajes_UNIQUE` (`idpersonajes`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +40,7 @@ CREATE TABLE `personajes` (
 
 LOCK TABLES `personajes` WRITE;
 /*!40000 ALTER TABLE `personajes` DISABLE KEYS */;
+INSERT INTO `personajes` VALUES (1,'Asuri','asuri.jpg','500000','Cuchillas','Espada'),(2,'Bodvar','bodvar.jpg','300000','Martillo','Espada'),(3,'Ember','ember.jpg','100000','Arco','Cuchillas'),(4,'Kor','kor.jpg','800000','Guanteletes','Martillo'),(5,'Lucien','lucien.jpg','400000','Cuchillas','Pistolas'),(6,'Mirage','mirage.jpg','900000','Guadaña','Lanza'),(7,'Orion','orion.jpg','700000','Lanza_cohete','Lanza'),(8,'Sentinel','sentinel.jpg','600000','Cuchillas','Martillo'),(9,'Teros','teros.jpg','100000','Martillo','Hacha'),(10,'Val','val.jpg','200000','Guanteletes','Espada');
 /*!40000 ALTER TABLE `personajes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-27 19:21:35
+-- Dump completed on 2022-11-30 17:41:31

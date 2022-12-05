@@ -1,21 +1,24 @@
 const fs= require('fs');
 const path = require('path');
+const db = require('../database/models');
 
-const brawllsJSON = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/brawlls.json'), 'utf-8'));
 
-const BrawllController = {
-    getbrawlls: (req,res) => {
-        res.render('index', { brawllsJSON, title : 'brawllhalla' })
-    },
 
-    getbrawllsByid: (req,res) => {
-        const brawll = brawllsJSON.find(brawll => {
-            return brawll.id === req.params.slug;
+
+
+
+module.exports = {
+    
+    getbrawlls: function(req,res) {
+       db.personajes.findAll()
+        .then(function(personajes){
+            res.render(path.resolve(__dirname, '../views/home'), {personajes: personajes} ) 
+            
         })
-        if(brawll){
-            res.render('brawll-detail', {  brawll,title: 'brawll Detail' });
-        }
     }
+
+    
+
 };
 
-module.exports = BrawllController;
+

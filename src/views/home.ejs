@@ -5,12 +5,12 @@
 	<body>
 		<header>
 			<div class="container">
-				<h1><%= title %></h1>
+				<h1> brawllhalla</h1>
 				<hr />
 				<nav>
 				<a href="#">Home</a>
 				<a href="#palabra">Nuestras Leyendas</a>
-				</nav>
+				</nav> 
 			</div>
 
 		</header>
@@ -31,22 +31,31 @@
 
 		<main>
 			<section class="cartas">
-				<% brawllsJSON.forEach(brawll => { %>
+				<% personajes.forEach(personaje=> { %>
 
-				<div class="card1">
-          <img src="/assets/<%- brawll.id %>.jpg" alt="<%- brawll.super_brawll %> image" width= "250">
-       
-					<div class="card">
-            <h4><%= brawll.super_brawll %></h4>
-            <a href="brawll-detail/<%- brawll.id %>">Details</a>
 
-          </div>
-				</div>
+					<div class="card1">
+						<img src="/assets/<%= personaje.imagen %>" alt="..." width= "250">
 
-				<% }) %>
-			</section>
+
+							<div class="card">
+
+								<p> <strong>Nombre :</strong> <%= personaje.nombre %> </p>
+								<p> <strong>Price :</strong> <%=  personaje.price %> </p>
+								<p> <strong>Weapon_1 :</strong> <%=  personaje.weapon_1 %> </p>
+								<p> <strong>Weapon_1 :</strong> <%=  personaje.weapon_2 %> </p>
+								
+							  	
+							</div>
+							</div>
+
+
+						<% }) %>
+		</section>
 
 		</main>
+
+		
 
 
 

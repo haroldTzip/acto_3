@@ -16,44 +16,10 @@ MySQL: permite almacenar y acceder a los datos a través de múltiples motores d
 
 nodemon: nodemon es una utilidad de interfaz de línea de comandos (CLI) desarrollada por @rem que envuelve su aplicación Node, vigila el sistema de archivos y reinicia automáticamente el proceso.
 
-Multer es un "middleware" de node. js para el manejo de multipart/form-data , el cuál es usado sobre todo para la subida de archivos. Está escrito sobre busboy para maximizar su eficiencia.
 
 Sequelize-cli: es un ORM que permite a los usuarios llamar a funciones javascript para interactuar con SQL DB sin escribir consultas reales. Es bastante útil para acelerar el tiempo de desarrollo.
 
 
 
-module.exports = (sequelize, DataTypes) => {
-    const personajes = sequelize.define('Personajes', {
-        id: {
-            type : DataTypes.INTEGER,
-            primaryKey : true,
-            autoIncrement : true,
-            allowNull : false,
-            unique : true
-        },
-        price : {
-            allowNull : false,
-            type : float
-        },
-         weapon_1 : {
-            allowNull : false,
-            type : DataTypes.STRING(45)
-        },
-         weapon_2 : {
-            allowNull : false,
-            type : DataTypes.STRING(45)
-        }, {
-            tableName : 'acto_3',
-            timestamps : false,
-            underscored : true
-        
+		
 
-    });
-
-    return personajes;
-}
-
-
-
-
-const db = require('../database/models')
